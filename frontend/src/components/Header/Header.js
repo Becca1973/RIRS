@@ -8,6 +8,7 @@ const Header = () => {
       <h1>Vodenje dopustov</h1>
       <nav>
         <Link to="/">Domov</Link>
+        <Link to="/request">Zahteva za dopust</Link>
       </nav>
     </header>
   );

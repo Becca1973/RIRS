@@ -1,0 +1,52 @@
+.request-form {
+  background-color: #cecece;
+  padding: 20px;
+  padding-right: 35px;
+  max-width: 400px;
+  margin: 40px auto;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.request-form h2 {
+  margin-bottom: 20px;
+}
+
+.request-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.request-form input[type="text"],
+.request-form input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.date-inputs {
+  display: flex;
+  gap: 25px;
+}
+
+.date-inputs div {
+  flex: 1;
+}
+
+.request-form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.request-form button:hover {
+  background-color: #45a049;
+}
