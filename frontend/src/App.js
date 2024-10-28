@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home";
+import RequestLeave from "./pages/RequestLeave";
 
 function App() {
   return (
@@ -12,6 +13,14 @@ function App() {
           element={
             <Layout>
               <Home />
+            </Layout>
+          }
+        />
+        <Route
+          path="/request"
+          element={
+            <Layout>
+              <RequestLeave />
             </Layout>
           }
         />
