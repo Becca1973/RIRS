@@ -1,27 +1,22 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const itemRoutes = require('./routes/itemRoutes');
-const { connectDB } = require('./db');  // Import connectDB
-
+const userRoutes = require('./routes/userRoutes');
+const requestRoutes = require('./routes/requestRoutes');
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3000', 
+    credentials: true              
+}));
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
 
-// Call connectDB to try connecting to the database
-connectDB();
+const PORT = process.env.PORT || 23077;
 
-// Define routes
-app.use('/api/items', itemRoutes);
-
-// Test API endpoint
-app.get('/api/test', (req, res) => {
-    res.json({ message: 'API is working!' });
-});
+app.use('/api/users', userRoutes);
+app.use('/api/requests', requestRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
